@@ -20,7 +20,7 @@ float cgpa(int nYrs)
 
 	for (i = 0; i < nYrs; i++)
 	{
-		printf("Please, enter your %s year CGPA: ", arr[i]);
+		printf(" Please, enter your %s year CGPA: ", arr[i]);
 		scanf("%f", &gp);
 		putchar('\n');
 
@@ -60,38 +60,38 @@ void cgpaGraduation(int nYrs, float (*cgpaFptr)(int nYr))
 
 	if (cgpa >= 1.00 && cgpa <= 1.99)
 	{
-		printf("Here is your graduation CGPA: %.3f\n", cgpa);
-		printf("\nCongratulations! You made a THIRD CLASS HONOURS.\n");
+		printf(" Here is your graduation CGPA: %.3f\n", cgpa);
+		printf("\n Congratulations! You made a THIRD CLASS HONOURS.\n");
 	}
 	else if (cgpa >= 2.00 && cgpa <= 2.99)
 	{
-		printf("Here is your graduation CGPA: %.3f\n", cgpa);
-		printf("\nCongratulations! You made a SECOND CLASS HONOURS.\n");
-		printf("\t\t\t\t(LOWER DIVISION)\n");
+		printf(" Here is your graduation CGPA: %.3f\n", cgpa);
+		printf("\n Congratulations! You made a SECOND CLASS HONOURS.\n");
+		printf("\t\t\t\t (LOWER DIVISION)\n");
 	}
 	else if (cgpa >= 3.00 && cgpa <= 3.49)
 	{
-		printf("Here is your graduation CGPA: %.3f\n", cgpa);
-		printf("\nCongratulations! You made a SECOND CLASS HONOURS.\n");
-		printf("\t\t\t\t(UPPER DIVISION)\n");
+		printf(" Here is your graduation CGPA: %.3f\n", cgpa);
+		printf("\n Congratulations! You made a SECOND CLASS HONOURS.\n");
+		printf("\t\t\t\t (UPPER DIVISION)\n");
 	}
 	else if (cgpa >= 3.5 && cgpa <= 4.00)
 	{
-		printf("Here is your graduation CGPA: %.3f\n", cgpa);
-		printf("\nCongratulations! You made a FIRST CLASS HONOURS.\n");
+		printf(" Here is your graduation CGPA: %.3f\n", cgpa);
+		printf("\n Congratulations! You made a FIRST CLASS HONOURS.\n");
 	}
 	else if (cgpa > 0 && cgpa < 1.00)
 	{
-		printf("Here is your graduation CGPA: %.3f\n", cgpa);
-		printf("Sorry, you did not qualify to be awarded a DEGREE.\n");
+		printf(" Here is your graduation CGPA: %.3f\n", cgpa);
+		printf(" Sorry, you did not qualify to be awarded a DEGREE.\n");
 	}
 	else if (cgpa == 0)
 	{
-		printf("\nFailed to calculate CGPA!\nThe value(s) entered is/are");
-		printf(" out of possible range, must\nbe greater than 0 and ");
-		printf("less than 4 for each year.\n\nPlease, try again...\n");
+		printf("\n Failed to calculate CGPA! The value(s) entered must");
+		printf("\n be greater than 0 and less than 4 for each year.\n\n");
+		printf(" Please, try again...\n");
 	}
 	printf("\n\n--------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n");
-	putchar('\n');
+		putchar('\n');
 }
 #endif /* _CGPA_H_ */
