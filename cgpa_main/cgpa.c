@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "cgpa.h"
+#include "../cgpa_header/cgpa.h"
 /**
  * main - Program Entry Point.
  *
@@ -13,12 +13,12 @@
  */
 int main(void)
 {
-	printf("\n\n------UNIVERISTY CGPA CALCULATOR (GLOBAL STANDARD)------\n");
+	printf("\n\n------UNIVERISTY CGPA CALCULATOR (GLOBAL STANDARD)-------\n");
 	int nYrs;
 
 	putchar('\n');
-	printf("Please, (in years and in figures) kindly enter the\n");
-	printf("duration of your university degree programme: ");
+	printf(" Please, (in years and in figures) kindly enter the\n");
+	printf(" duration of your university degree programme: ");
 	scanf("%d", &nYrs);
 	putchar('\n');
 
@@ -39,8 +39,8 @@ int main(void)
 	}
 	else
 	{
-		printf("Please, try again and enter a valid year of study\nbetween ");
-		printf("1 - 6 years.\n\nThank you.\n\n");
+		printf(" Please, try again and enter a valid year of study\n between ");
+		printf(" 1 - 6 years.\n\n Thank you.\n\n");
 		printf("\n-------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n");
 	}
 
