@@ -17,12 +17,12 @@ int main(void)
 	int nYrs;
 
 	putchar('\n');
-	printf(" Please, (in years and in figures) kindly enter the\n");
-	printf(" duration of your university degree programme: ");
+	printf(" Please, (in figures only) kindly enter the duration\n");
+	printf(" of your university degree programme: ");
 	scanf("%d", &nYrs);
 	putchar('\n');
 
-	if (nYrs > 0 && nYrs <= 6)
+	if (nYrs >= 1 && nYrs <= 6)
 	{
 		/* float (*cgpaFptr)(int nYrs) = cgpa; */
 		float (*cgpaFptr)(int nYrs);
@@ -40,7 +40,7 @@ int main(void)
 	else
 	{
 		printf(" Please, try again and enter a valid year of study\n between ");
-		printf(" 1 - 6 years.\n\n Thank you.\n\n");
+		printf(" 1 - 6.\n\n Thank you.\n\n");
 		printf("\n-------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n");
 	}
 
