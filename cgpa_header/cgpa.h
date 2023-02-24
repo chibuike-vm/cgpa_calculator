@@ -2,6 +2,81 @@
 #define _CGPA_H_
 
 /**
+ * nYrsInputValidator - Int nYrs variable validator.
+ *
+ * Description: This function basically validates the value of the nYrs
+ * variable by making sure the that only integer values are copied into the
+ * nYrs variable especially in the case where the user enters a string literal
+ * following the requested integer value.
+ *
+ * Return: This function returns the validated integer value of the nYrs
+ * variable to the calling function scope upon successful execution.
+ */
+int nYrsInputValidator(void)
+{
+	int nYrs, num_copied;
+	char *fgetsInput = (char *)malloc(50 * sizeof(char));
+
+	if (fgetsInput != NULL)
+	{
+		printf(" \n Please, (in figures only) kindly enter the duration\n");
+		printf(" of your university degree programme: ");
+		fgets(fgetsInput, 50, stdin);
+		putchar('\n');
+
+		num_copied = sscanf(fgetsInput, "%d", &nYrs);
+
+		/* Conditional Ternary Operator */
+		(num_copied == 1) ? num_copied : (nYrs = 0);
+	}
+	else
+	{
+		printf("\n\nMemory allocation was unsuccesful!\n\n");
+	}
+
+	free(fgetsInput);
+	fgetsInput = NULL;
+
+	return (nYrs);
+}
+
+/**
+ * gpInputValidator - Float gp variable validator.
+ *
+ * Description: This function basically validates the value of the gp varaible
+ * by amking sure that only floating integers are copied into the gp variable
+ * especially when a user enters a string literal following the requested
+ * floating point number value.
+ *
+ * Return: This function returns the validated floating point number value of
+ * the gp variable to the calling function scope upon successful execution.
+ */
+float gpInputValidator(void)
+{
+	float gp;
+	int num_copied;
+	char *fgetsInput = (char *)malloc(50 * sizeof(char));
+
+	if (fgetsInput != NULL)
+	{
+		fgets(fgetsInput, 50, stdin);
+		num_copied = sscanf(fgetsInput, "%f", &gp);
+
+		/* Conditional Ternary Operator */
+		(num_copied == 1) ? num_copied : (gp = 0);
+	}
+	else
+	{
+		printf("\n\nMemory allocation was unsuccesful!\n\n");
+	}
+
+	free(fgetsInput);
+	fgetsInput = NULL;
+
+	return (gp);
+}
+
+/**
  * cgpa - Function for Calculating the TOTAL CGPA.
  * @nYrs: Provides the value for the iteration that will generate the totalGp.
  *
@@ -9,7 +84,7 @@
  * then uses it for iterations that will generate the totalGp then with some
  * tweaking with conditional statements.
  *
- * Return: This function returns the calculated totalGP upon sucessful
+ * Return: This function returns the calculated totalGP upon successful
  * execution.
  */
 float cgpa(int nYrs)
@@ -21,7 +96,7 @@ float cgpa(int nYrs)
 	for (i = 0; i < nYrs; i++)
 	{
 		printf(" Please, enter your %s year CGPA: ", arr[i]);
-		scanf("%f", &gp);
+		gp = gpInputValidator();
 		putchar('\n');
 
 		if (gp >= 0 && gp <= 4)
@@ -53,7 +128,6 @@ float cgpa(int nYrs)
  */
 void cgpaGraduation(int nYrs, float (*cgpaFptr)(int nYr))
 {
-	int nYr = nYrs;
 	float retTotalGp = (*cgpaFptr)(nYrs), cgpa;
 
 	cgpa = (retTotalGp / nYrs);
