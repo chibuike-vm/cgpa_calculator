@@ -41,7 +41,7 @@ int main(void)
 	{
 		printf(" \n Please, try again and enter a valid year of study\n between ");
 		printf(" 1 - 6.\n\n Thank you.\n\n");
-		printf("\n-------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n");
+		printf("\n-------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n\n\n");
 	}
 
 	return (0);

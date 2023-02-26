@@ -99,7 +99,7 @@ float cgpa(int nYrs)
 		gp = gpInputValidator();
 		putchar('\n');
 
-		if (gp >= 0 && gp <= 4)
+		if (gp > 0 && gp <= 4)
 		{
 			totalGp += gp;
 		}
@@ -166,6 +166,6 @@ void cgpaGraduation(int nYrs, float (*cgpaFptr)(int nYr))
 		printf(" Please, try again...\n");
 	}
 	printf("\n\n--------CREATED BY @chibuike-vm (GITHUB USERNAME)--------\n");
-		putchar('\n');
+		printf("\n\n");
 }
 #endif /* _CGPA_H_ */
